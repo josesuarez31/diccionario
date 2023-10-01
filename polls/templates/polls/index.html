@@ -1,3 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+
 {% if latest_question_list %}
     <input placeholder="Texto"/>
     <button>Buscar</button>
@@ -8,4 +12,4 @@
     </ul>
 {% else %}
     <p>No polls are available.</p>
-{% endif %}
+{% endif %} 
