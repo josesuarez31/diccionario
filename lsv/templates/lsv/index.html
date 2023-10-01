@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'lsv/style.css' %}">
+
+{% if latest_word_list %}
+    <input placeholder="Texto"/>
+    <button>Buscar</button>
+    <ul>
+    {% for word in latest_word_list %}
+    <li><a href="{% url 'lsv:detail' word.id %}">{{ word.word }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay palabras disponibles.</p>
+{% endif %} 

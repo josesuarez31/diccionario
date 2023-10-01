@@ -1,0 +1,16 @@
+<h1>{{ word.word }}</h1>
+<h2>{{ word.type }}</h2>
+<p>{{ word.description }}</p>
+<video width='400' controls>
+    <source src="{{ object.videofile.url }}" type='video/mp4'>
+    Your browser does not support the video tag.
+</video>
+{{  word.numbers_set.all }}
+
+{% for number in word.numbers_set.all %}
+           
+<li>
+    {{ number.word }}
+</li>
+        
+{% endfor %}
